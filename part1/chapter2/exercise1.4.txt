@@ -1,0 +1,18 @@
+marton@home:~$ docker run -d -it --name 1.4 ubuntu bash
+marton@home:~$ docker exec 1.4 ps aux
+marton@home:~$ docker exec -it 1.4 bash
+root@f3f3df1795b5:/# apt update
+root@f3f3df1795b5:/# apt install curl
+root@f3f3df1795b5:/# exit
+marton@home:~$ docker exec 1.4 ps aux
+marton@home:~$ docker exec -it 1.4 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
