@@ -1,1 +1,8 @@
-You can find the source code here: https://github.com/docker-hy
+❯ docker run -d -it devopsdockeruh/simple-web-service:ubuntu
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+90f82575e4f905e6cd19b175f94f30417f356d7703051574efe7b7404f7a5a14
+❯ docker exec -it 90 bash
+root@90f82575e4f9:/usr/src/app# tail -f ./text.log
+2023-12-09 21:25:13 +0000 UTC
+2023-12-09 21:25:15 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
